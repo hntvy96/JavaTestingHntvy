@@ -85,7 +85,7 @@ public class WorkServiceImpl implements WorkService {
         return codeResponse;
     }
 
-    public static Work convertWorkEntityToWorkModel(WorkEntity workEntity){
+    private Work convertWorkEntityToWorkModel(WorkEntity workEntity){
         Work work = new Work();
         work.setId(workEntity.getId());
         work.setWorkName(workEntity.getWorkName());
@@ -96,7 +96,7 @@ public class WorkServiceImpl implements WorkService {
         return work;
     }
 
-    public static WorkEntity convertWorkModelToWorkEntity(Work work){
+    private WorkEntity convertWorkModelToWorkEntity(Work work){
        WorkEntity workEntity = new WorkEntity();
        workEntity.setId(work.getId());
        workEntity.setWorkName(work.getWorkName());
@@ -107,7 +107,7 @@ public class WorkServiceImpl implements WorkService {
        return workEntity;
     }
     
-    public static List<Work> convertListWorkEntityToListWorkModel(List<WorkEntity> workEntityList){
+    private List<Work> convertListWorkEntityToListWorkModel(List<WorkEntity> workEntityList){
         List<Work> workList = new ArrayList<Work>();
 
         for (WorkEntity workEntity : workEntityList) {
